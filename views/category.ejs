@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Use the category attribute to set the tab name -->
-    <title>...</title>
+    <title><%=category%></title>
     <!-- Link to style.css -->
-    
+    <link rel="stylesheet" href="/style.css"
   </head>
   <body>
     <div class="header">
       <!-- Use the category attribute to set the header -->
-      <h1>...</h1>
+      <h1><%= category %></h1>
     </div>
 
     <nav>
@@ -26,10 +26,10 @@
       <!-- You should use the values from data to dynamically populate the image, item name, cost, and path -->
       
       <div class="item-card">
-        <img src="..." />
-        <h3>...</h3>
-        <p>$...</p>
-        <a href="...">More info</a>
+        <img src="<%= items.imageURL %>" />
+        <h3><%= items.name %></h3>
+        <p>$<%= items.cost %></p>
+        <a href="<%= items.path %>">More info</a>
       </div>
 
     </div>
